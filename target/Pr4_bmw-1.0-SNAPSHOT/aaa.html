@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BMW Motors Ukraine</title>
+        <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    </head>
+    <body>
+
+        <div id='header' style='background-color: aquamarine; height: 150px' align='center'>
+            <div>
+                <h1>BMW Motors Ukraine</h1>
+            </div>
+        </div>
+
+        <div id='search' style='background-color: lime; height: 40px' align='center'>
+            <form action='/search'>
+                Query: <input name='q'/>
+                <input type='submit' value='Search'/>
+            </form>
+        </div>
+
+        <div id='menu' style='background-color: burlywood; height: 80px' align='center'>
+            <table>
+                <tr>
+                    <td id='electro' style='width: 200px;' align='center'>
+                        <h2>
+                            <a href='/main?cat=e'>
+                                Electro car
+                            </a>
+                        </h2>
+                    </td>
+                    <td id='suv' style='width: 200px;' align='center'>
+                        <h2>
+                            <a href='/main?cat=s'>
+                                Offroad car
+                            </a>
+                        </h2>
+                    </td>
+                    <td id='car' style='width: 200px;' align='center'>
+                        <h2>
+                            <a href='/main?cat=c'>
+                                Car
+                            </a>
+                        </h2>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id='content' style='background-color: bisque;' align='center'>
+
+            <form action='/Pr4_bmw/profile'>
+                <input type='submit' value='My Profile'/>
+            </form>
+            <form action='/Pr4_bmw/main/exit=true'>
+                <input type='submit' value='Exit'/>
+            </form>
+            <form action='/Pr4_bmw/basket'>
+                <input type='submit' value='My Basket'/>
+            </form>
+            
+            <a href='/Pr4_bmw/basket?id='>
+                <input type='submit' value='Remove From Basket'/>
+            </a>
+            
+            <h1>" + item.getPrice() + " UAH</h1>
+
+
+            <div>
+                <a href='/item?model='>
+                    <table>                    
+                        <tr>
+                            <td id='model'>
+                                <h1></h1>
+                            </td>
+                            <td id='picture'>
+                                <img src=''/>
+                            </td>
+                            <td id='description'>
+                                <h3></h3>
+                            </td>
+                            <td id='price'>
+                                <h1> UAH</h1>
+                            </td>                            
+                        </tr>                    
+                    </table>
+                </a>
+            </div>
+        </div>
+
+        <div id='footer' style='background-color: blueviolet; height: 30px;' align='center'>
+            <h3>Copyright: Alex</h3>
+        </div>
+    </body>
+</html>
