@@ -41,7 +41,7 @@ public class ItemController {
         User u = userService.getUserFromSession(request.getSession());
         ModelAndView mav = new ModelAndView();
         Integer id = itemService.getCorrectId(idString);
-        if (id != null) {
+        if (id != null && id < itemsCache.length() && id > 0) {
             Bmw item = itemService.getItemById(id, itemsCache.getItems());
             mav.setViewName(ITEM);
             mav.addObject(ITEM, item);

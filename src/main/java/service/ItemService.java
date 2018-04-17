@@ -70,17 +70,6 @@ public class ItemService {
         return itemsById;
     }
 
-    public void changeBasketItems(Integer id, Basket basket, User u) {
-        if (id == 0) {
-            basket.items.clear();
-        }
-        if (id > 0) {
-            basket.items.add(id);
-        }
-        if (id < 0) {
-            basket.items.remove(new Integer(-id));
-        }
-        u.setBasket(new Gson().toJson(basket));
-    }
+    
     
 }

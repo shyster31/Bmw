@@ -10,56 +10,13 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     
-<!--        <servlet>
-        <servlet-name>MainServlet</servlet-name>
-        <servlet-class>servlet.MainServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ItemServlet</servlet-name>
-        <servlet-class>servlet.ItemServlet</servlet-class>
-    </servlet>
-        <servlet>
-        <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>servlet.LoginServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>servlet.RegisterServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>BasketServlet</servlet-name>
-        <servlet-class>servlet.BasketServlet</servlet-class>
-    </servlet>
-        <servlet-mapping>
-        <servlet-name>MainServlet</servlet-name>
-        <url-pattern>/main</url-pattern>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ItemServlet</servlet-name>
-        <url-pattern>/item</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-                <servlet-name>LoginServlet</servlet-name>
-            <url-pattern>/login</url-pattern>
-        </servlet-mapping>
-        <servlet-mapping>
-            <servlet-name>RegisterServlet</servlet-name>
-            <url-pattern>/register</url-pattern>
-        </servlet-mapping>
-        <servlet-mapping>
-            <servlet-name>BasketServlet</servlet-name>
-            <url-pattern>/basket</url-pattern>
-        </servlet-mapping>
--->        <session-config>
-            <session-timeout>
-                30
-            </session-timeout>
-        </session-config><!--
-        <welcome-file-list>
-            <welcome-file>/main</welcome-file>
-        </welcome-file-list>-->
-        <listener>
-            <listener-class>listener.OurSessionListener</listener-class>
-        </listener>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <listener>
+        <listener-class>listener.OurSessionListener</listener-class>
+    </listener>
 </web-app>

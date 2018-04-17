@@ -18,8 +18,9 @@ import service.UserService;
 @Controller
 public class LoginController {
 
+    public static final String LOGIN_PAGE = "/Pr4_bmw/login";
     private static final String LOGIN_URL = "/login";
-    private static final String LOGIN = "login";
+    public static final String LOGIN = "login";
     private static final String PASSWORD = "pass";
 
     @Autowired

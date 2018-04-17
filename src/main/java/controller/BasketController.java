@@ -22,7 +22,6 @@ import service.UserService;
 @Controller
 public class BasketController {
 
-    
     private static final String BASKET_PAGE = "/Pr4_bmw/basket";
     private static final String BASKET_URL = "/basket";
     private static final String BASKET = "basket";
@@ -40,19 +39,23 @@ public class BasketController {
     public ModelAndView basket(HttpServletRequest request,
             HttpServletResponse response,
             @RequestParam(name = ID, required = false) String idString) throws IOException {
-        
+
         ModelAndView mav = new ModelAndView();
-        mav.setViewName(BASKET);
         User u = userService.getUserFromSession(request.getSession());
-        Integer id = itemService.getCorrectId(idString);
-        if(id != null){
-            itemService.changeBasketItems(id, userService.getBasket(u), u);
-            response.sendRedirect(BASKET_PAGE);
-        }else{
-            List<Bmw> items = itemService.getItemsById(userService.getBasket(u).items, itemsCache.getItems());
-            mav.addObject(ITEMS, items);
-            mav.addObject(COUNTER, counter);
-            mav.addObject(USER, u);
+        if (u != null) {
+            Integer id = itemService.getCorrectId(idString);
+            if (id != null) {
+                userService.changeBasketItems(id, userService.getBasket(u), u);
+                response.sendRedirect(BASKET_PAGE);
+            } else {
+                List<Bmw> items = itemService.getItemsById(userService.getBasket(u).items, itemsCache.getItems());
+                mav.setViewName(BASKET);
+                mav.addObject(ITEMS, items);
+                mav.addObject(COUNTER, counter);
+                mav.addObject(USER, u);
+            }
+        } else {
+            response.sendRedirect(MAIN_PAGE);
         }
         return mav;
     }

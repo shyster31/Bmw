@@ -22,6 +22,10 @@ public class ItemsCache {
         startToUpdateCache();
     }
   
+    public int length(){
+        return items.size();
+    }
+    
     public Map<Integer, Bmw> getItems() {
         return items;
     }

@@ -9,7 +9,7 @@
             Input psss:   <input type='password' name='pass'/><br/>
             <input type='submit' value='Sign In'/>
         </form>
-        <form action='/Pr4_bmw/register'>
+        <form action='/Pr4_bmw/registration'>
             <input type='submit' value='Register'/>
         </form>
     </div>
